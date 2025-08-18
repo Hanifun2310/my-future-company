@@ -1,0 +1,15 @@
+/* style  */
+html{
+    scroll-behavior: smooth;
+}
+
+/* css untuk dark mode */
+body.dark{
+    background-color: #1a2020;
+    color: #e2e8f0;
+}
+
+body.dark .bg_blue-50{
+    background-color: #2d3748;
+    
+}
