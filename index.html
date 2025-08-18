@@ -29,85 +29,105 @@
 </head>
 <body class="bg-white text-stone-900 font-serif transition-colors duration-500">
 
-<nav class="text-white bg-indigo-500 sticky top-0 flex items-center justify-between p-4 transition-colors duration-500 z-50">
-    <a href="#profile-section" class="flex items-center space-x-2">
-        <img src="https://i.pinimg.com/1200x/06/25/96/0625966922ea723134c4ab6f5e32cf39.jpg" 
-             alt="logo perusahaan"
-             class="h-10 w-10 rounded-full">
-        <span class="font-bold text-xl">CODE</span>
-    </a>
+  <!-- navi gasi -->
+    <nav class="text-white bg-indigo-500 sticky  flex items-center justify-between p-4 transition-colors duration-500">
+        
+        <a href="#" class="flex items-center space-x-2">
+            <img src="https://i.pinimg.com/1200x/06/25/96/0625966922ea723134c4ab6f5e32cf39.jpg" 
+                 alt="logo perusahaan"
+                 class="h-10 w-10 rounded-full">
+            <span class="font-bold text-xl">CODE</span>
+        </a>
+        
+        <div class="flex-grow flex justify-center hidden md:flex">
+            <button id="theme-toggle" type="button" class="text-cyan-500 hover:text-cyan-700 p-2.5 transition-colors duration-500">
+                <i id="theme-icon" class="fas fa-moon text-xl"></i>
+            </button>
+        </div>
+
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="hover:text-cyan-700">Community</a>
+            <a href="#" class="hover:text-cyan-700">Product</a>
+            <a href="#" class="hover:text-cyan-700">News</a> 
+            <a href="#" class="hover:text-cyan-700">Contact</a> 
+            <a href="#" class="hover:text-cyan-700">Contact</a> 
+        </div>
+        
+        <button id="mobile-menu-button" class="md:hidden text-cyan-500">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </nav>
     
-    <div class="flex-grow flex justify-center hidden md:flex">
-        <button id="theme-toggle" type="button" class="text-white hover:text-gray-200 p-2.5 transition-colors duration-500">
-            <i id="theme-icon" class="fas fa-moon text-xl"></i>
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-100 dark:bg-gray-700 transition-colors duration-500 py-4 px-6 absolute w-full z-40">
+        <a href="#" class="block py-2 hover:bg-blue-200 dark:hover:bg-gray-600">community</a>
+        <a href="#" class="block py-2 hover:bg-blue-200 dark:hover:bg-gray-600">Product</a>
+        <a href="#" class="block py-2 hover:bg-blue-200 dark:hover:bg-gray-600"></a>
+        <a href="#" class="block py-2 hover:bg-blue-200 dark:hover:bg-gray-600">Contact</a>
+        <a href="#" class="block py-2 hover:bg-blue-200 dark:hover:bg-gray-600">Contact</a>
+        
+        <button id="mobile-theme-toggle" type="button" class="w-full text-left py-2 hover:bg-blue-200 dark:hover:bg-gray-600">
+            <i class="fas fa-moon text-lg mr-2"></i> Dark Mode
         </button>
     </div>
-
-    <div class="hidden md:flex space-x-4">
-        <a href="#profile-section" class="hover:text-cyan-700">Profile</a> 
-        <a href="#product-section" class="hover:text-cyan-700">Product</a>
-        <a href="#community-section" class="hover:text-cyan-700">Community</a>
-    </div>
     
-    <button id="mobile-menu-button" class="md:hidden text-white">
-        <i class="fas fa-bars text-xl"></i>
-    </button>
-</nav>
 
-<div id="mobile-menu" class="hidden md:hidden bg-blue-500 dark:bg-gray-700 transition-colors duration-500 py-4 px-6 fixed w-full z-40 top-[4rem]">
-    <a href="#profile-section" class="block py-2 text-white hover:bg-blue-600 dark:hover:bg-gray-600">Profile</a>
-    <a href="#product-section" class="block py-2 text-white hover:bg-blue-600 dark:hover:bg-gray-600">Product</a>
-    <a href="#community-section" class="block py-2 text-white hover:bg-blue-600 dark:hover:bg-gray-600">Community</a>
-    
-    <button id="mobile-theme-toggle" type="button" class="w-full text-left py-2 text-white hover:bg-blue-600 dark:hover:bg-gray-600">
-        <i class="fas fa-moon text-lg mr-2"></i> Dark Mode
-    </button>
-</div>
-
-<section id="profile-section" class="px-6 mx-auto flex justify-between items-center my-6 space-x-6">
-    <div class="w-3/6">
-    <h4 class="text-xl font-bold font-mono">Have a coding issue?</h4>
-    <h3 class="text-5xl font-bold font-mono">Let's fix it together</h3>
-    <p class="py-4">Write down all your problems and send them here. You will get a mentor or a partner to fight with you </p>
-    <button id="open-modal-btn" class="bg-indigo-400 text-white py-2 px-4 rounded-3xl transition-all duration-300 hover:bg-indigo-600 hover:scale-110">submit</button>
+    <!-- hero -->
+<section id="profile-section" class="px-6 mx-auto flex flex-col sm:flex-row justify-center items-center my-12 sm:space-x-6 space-y-6 sm:space-y-0">
+    <div class="sm:w-3/6 text-center sm:text-left">
+        <h4 class="text-xl font-bold font-mono text-gray-800">Have a coding issue?</h4>
+        <h3 class="text-5xl font-bold font-mono text-gray-900 mt-2">Let's fix it together</h3>
+        <p class="py-4 text-gray-700">Write down all your problems and send them here. You will get a mentor or a partner to fight with you</p>
+        <!-- Tombol yang memicu pop-up -->
+        <button id="open-modal-btn" class="bg-indigo-400 text-white py-2 px-4 rounded-3xl transition-all duration-300 hover:bg-indigo-600 hover:scale-110">
+            submit
+        </button>
     </div>
-  <img class="w-3/6" src="background.png" alt="background">
+    <!-- Placeholder gambar -->
+    <img class="sm:w-3/6 mt-6 sm:mt-0" src="background.png" alt="background">
 </section>
 
 <!-- Modal Pop-up (tersembunyi secara default) -->
-
 <div id="submit-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
     <div class="modal-content bg-white rounded-lg shadow-2xl p-8 w-11/12 max-w-md">
         <div class="flex justify-between items-center mb-6">
-            <h3 class="flex justify-center text-2xl font-bold text-gray-800">Send us your problem here</h3>
+            <h3 class="text-2xl font-bold text-gray-800">Formulir Keluhan</h3>
             <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800 transition-colors">
                 <i class="fas fa-times text-xl"></i>
             </button>
         </div>
-
-<!-- profile -->
-
-<div class="py-50 bg--100">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white shadow-xl rounded-lg overflow-hidden">
-                <div class="bg-indigo-500 py-6 px-8 sm:px-10">
-                    <h2 class="flex justify-center text-2xl font-bold text-white tracking-wide uppercase">About Us</h2>
-                </div>
-                <div class="p-8 sm:p-10 text-center">
-                    <h3 class="mt-0 text-3xl font-extrabold text-gray-900 tracking-tight">"CODE"</h3>
-                    <p class="mt-4 text-lg text-gray-700 leading-relaxed">
-                        Innovation fuels our craft. Here at "CODE," we're not just keeping up with the digital landscape  we're shaping it. We fuse creativity with cutting-edge technology to architect and build digital experiences that are not only functional but truly inspiring.
-                    </p>
-                </div>
+        
+        <form onsubmit="event.preventDefault(); alert('Formulir berhasil disubmit!');" class="space-y-4">
+            <div>
+                <input type="text" placeholder="Nama Pengguna" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
             </div>
-        </div>
+            <div>
+                <input type="email" placeholder="Email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <input type="password" placeholder="Kata Sandi" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <textarea placeholder="Surat Keluhan" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+            <div>
+                <input type="file" class="w-full text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+            </div>
+            <div class="pt-4">
+                <button type="submit" class="w-full bg-indigo-500 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-600 transition-colors">
+                    Kirim
+                </button>
+            </div>
+        </form>
     </div>
+</div>
 
 <!-- product -->
 
-<h1 id="product-section" class=" bg-rounded-3xl mt-20 mb-10 text-center font-bold text-3xl">PRODUCT
+<h1 class="bg- bg-rounded-3xl mt-20 mb-20 text-center font-bold text-3xl">PRODUCT
+    <p>Get yours now!</p>
 </h1>
-<div class="mb-5 flex flex-col sm:flex-row justify-center items-center sm:space-x-8 space-y-8 sm:space-y-0 mb-20">
+    <div class="flex flex-col sm:flex-row justify-center items-center sm:space-x-8 space-y-8 sm:space-y-0 mb-20">
+        
     <div class="bg-white p-6 rounded-lg shadow-lg text-center w-full max-w-xs transition-transform duration-300 hover:scale-105">
         <a href="https://www.w3schools.com/html/html_intro.asp"
            target="_blank"
@@ -137,13 +157,13 @@
         </a>
         <p class="mt-4 text-gray-700 font-semibold text-lg ">Learn every topic from beginning to end, easily</p>
     </div>
+        
 </div>
- <div>
-    <h1 class="bg-rounded-3xl mt-20 mb-10 text-center font-bold text-3xl mb-50">Get yours now!</h1>
- </div>
-<!-- community -->
 
-<div id="community-section" class=" bg-indigo-600 p-8 text-white text-center">
+
+<!-- container -->
+
+<div class="bg-indigo-600 p-8 text-white text-center">
     <h3 class="text-3xl font-extrabold mb-6 tracking-wide">
         JOIN OUR COMMUNITY
     </h3>
@@ -153,8 +173,8 @@
            rel="noopener noreferrer" 
            aria-label="Instagram Profile">
             <i class="fa-brands fa-instagram text-4xl 
-                       transition-all duration-300 
-                       hover:text-pink-400 hover:scale-125">
+                      transition-all duration-300 
+                      hover:text-pink-400 hover:scale-125">
             </i>
         </a>
         
@@ -163,8 +183,8 @@
            rel="noopener noreferrer" 
            aria-label="Discord Profile">
             <i class="fa-brands fa-discord text-4xl 
-                       transition-all duration-300 
-                       hover:text-blue-400 hover:scale-125">
+                      transition-all duration-300 
+                      hover:text-blue-400 hover:scale-125">
             </i>
         </a>
         
@@ -173,42 +193,69 @@
            rel="noopener noreferrer" 
            aria-label="YouTube Channel">
             <i class="fa-brands fa-youtube text-4xl 
-                       transition-all duration-300 
-                       hover:text-red-500 hover:scale-125">
+                      transition-all duration-300 
+                      hover:text-red-500 hover:scale-125">
             </i>
         </a>
     </div>
 </div>
 
-<script>
-    // Logika Hamburger Menu
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+
+    <script>
+        // Logika Hamburger Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Logika Dark Mode
+        const themeToggleDesktop = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('mobile-theme-toggle');
+        const body = document.body;
+        const themeIcon = document.getElementById('theme-icon');
+
+        const toggleTheme = () => {
+            body.classList.toggle('dark');
+            if (body.classList.contains('dark')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        };
+
+        themeToggleDesktop.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+
+
+<!-- Skrip JavaScript yang mengontrol pop-up -->
+
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const submitModal = document.getElementById('submit-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalContent = document.querySelector('#submit-modal .modal-content');
+
+    openModalBtn.addEventListener('click', () => {
+        submitModal.classList.remove('hidden');
+        setTimeout(() => {
+            submitModal.classList.add('opacity-100');
+            modalContent.classList.remove('opacity-0', 'scale-95');
+            modalContent.classList.add('opacity-100', 'scale-100');
+        }, 10);
     });
 
-    // Logika Dark Mode
-    const themeToggleDesktop = document.getElementById('theme-toggle');
-    const themeToggleMobile = document.getElementById('mobile-theme-toggle');
-    const body = document.body;
-    const themeIcon = document.getElementById('theme-icon');
-
-    const toggleTheme = () => {
-        body.classList.toggle('dark');
-        if (body.classList.contains('dark')) {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.add('fa-sun');
-        } else {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        }
-    };
-
-    themeToggleDesktop.addEventListener('click', toggleTheme);
-    themeToggleMobile.addEventListener('click', toggleTheme);
-
-</script>
+    closeModalBtn.addEventListener('click', () => {
+        modalContent.classList.remove('opacity-100', 'scale-100');
+        modalContent.classList.add('opacity-0', 'scale-95');
+        setTimeout(() => {
+            submitModal.classList.add('hidden');
+        }, 300);
+    });
+    </script>
 </body>
 </html>
